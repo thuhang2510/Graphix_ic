@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Graphix_ic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2.5*"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10px 10px 0px 0px">
+            <TextBlock Text="Chức năng" Margin="0px 0px 0px 10px"></TextBlock>
+            <WrapPanel Margin="0px 0px 0px 10px">
+                <Button Content="Tạo đồ thị random" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Lưu đồ thị" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Đọc dồ thị" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Hủy thao tác" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Tải lại đồ thị" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+            </WrapPanel>
+            <WrapPanel Margin="0px 0px 0px 10px">
+                <Button Content="Thêm đỉnh" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Xóa đỉnh" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Cập nhật đỉnh" Padding="8px 0px 8px 0px"></Button>
+            </WrapPanel>
+            <WrapPanel Margin="0px 0px 0px 10px">
+                <Button Content="Thêm cạnh" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Xóa cạnh" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Cập nhật cạnh" Padding="8px 0px 8px 0px"></Button>
+            </WrapPanel>
+            <WrapPanel Margin="0px 0px 0px 10px">
+                <Button Content="Duyệt đồ thị theo DFS" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+                <Button Content="Duyệt đồ thị theo BFS" Margin="0px 0px 10px 0px" Padding="8px 0px 8px 0px"></Button>
+            </WrapPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10px 10px 10px 0px">
+            <TextBlock Text="Hướng dẫn" Margin="0px 0px 0px 10px"></TextBlock>
+            <TextBlock Text="Chọn 1 trong số các chức năng để tiến hành thao tác với đồ thị" TextWrapping="Wrap"></TextBlock>
+        </StackPanel>
+
+        <Canvas x:Name="canvas" Grid.Row="1" Grid.ColumnSpan="2">
+
+        </Canvas>
     </Grid>
 </Window>
